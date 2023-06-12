@@ -1,0 +1,52 @@
+const { Function, Scraper } = new (require('@neoxr/neoxr-js'))
+// Owner number
+global.owner = '212609395104'
+// Owner name
+global.owner_name = 'Hero.js'
+// Database name (Default: database)
+global.database = 'bot'
+// Maximum upload file size limit (Default : 100 MB)
+global.max_upload = 100
+// Delay for spamming protection (Default : 3 seconds)
+global.cooldown = 3
+// User Limitation (Default : 25)
+global.limit = 25
+// Time to be temporarily banned and others (Default : 30 minutes)
+global.timer = 1800000
+// Symbols that are excluded when adding a prefix (Don't change it)
+global.evaluate_chars = ['=>', '~>', '<', '>', '$']
+// Country code that will be automatically blocked by the system, when sending messages in private chat
+global.blocks = ['91', '92', '94', '967']
+// Put target jid to forward friends story
+global.forwards = global.owner + '@c.us'
+// Get neoxr apikey by registering at https://api.neoxr.my.id
+global.Api = new (require('./neoxrApi'))(process.env.API_KEY)
+// Timezone (Default : Asia/Jakarta)
+global.timezone = 'Asia/Jakarta'
+// Bot version
+global.version = '2.2.2',
+// Bot name
+global.botname = `Fuji`
+// Footer text
+global.footer = 'تم تطوير بواسطة الـDev Arena ッ'
+// Scraper
+global.scrap = Scraper
+// Function
+global.Func = Function
+// Global status
+global.status = Object.freeze({
+   wait: Func.texted('bold', 'جاري . . .'),
+   invalid: Func.texted('bold', 'الرابط غلط!'),
+   wrong: Func.texted('bold', 'الوضع غلط!'),
+   getdata: Func.texted('bold', 'ويت. . .'),
+   fail: Func.texted('bold', 'لا يمكن!'),
+   error: Func.texted('bold', 'خطأ!'),
+   errorF: Func.texted('bold', 'اسف و لكن الأمر الذي تستخدمه خطأ.'),
+   premium: Func.texted('bold', 'الأمر خاص النخبة فقط تب تكتشف المزيد عن النخبة؟ اسئل المطور.'),
+   owner: Func.texted('bold', 'الأمر خاص المطور هيرو فقط'),
+   god: Func.texted('bold', 'الأمر فقط للماستر'),
+   group: Func.texted('bold', 'الأمر خاص بالمجموعات.'),
+   botAdmin: Func.texted('bold', 'حطني ادمن!!'),
+   admin: Func.texted('bold', 'الأمر خاص بالمشرفين فقط'),
+   private: Func.texted('bold', 'الأمر خاص بالخاص')
+})
